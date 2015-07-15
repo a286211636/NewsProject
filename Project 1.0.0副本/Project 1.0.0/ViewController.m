@@ -147,6 +147,7 @@
 -(void)timerStart{
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     [self.timer fire];
+    //12312312312312312312
 }
 -(void)timerStop{
     [self.timer invalidate];

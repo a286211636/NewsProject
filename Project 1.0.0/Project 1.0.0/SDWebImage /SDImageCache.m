@@ -101,10 +101,11 @@ BOOL ImageDataHasPNGPreffix(NSData *data) {
     return self;
 }
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    SDDispatchQueueRelease(_ioQueue);
-}
+//- (void)dealloc {
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//    SDDispatchQueueRelease(_ioQueue);
+//    [super dealloc];
+//}
 
 - (void)addReadOnlyCachePath:(NSString *)path {
     if (!self.customPaths) {

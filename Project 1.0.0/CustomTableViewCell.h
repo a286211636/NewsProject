@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BaseModel;
 @interface CustomTableViewCell : UITableViewCell
-@property (nonatomic ,retain) UILabel *txtLabel;
-@property (nonatomic,retain) UIImageView *PicImg;
-
+@property (nonatomic,retain) BaseModel *model;
 @end

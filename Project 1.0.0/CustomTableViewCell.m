@@ -8,10 +8,15 @@
 
 #import "CustomTableViewCell.h"
 #import "PrefixHeader.pch"
+#import "BaseModel.h"
+#import  "UIImageView+WebCache.h"
 
 @interface CustomTableViewCell ()
-
+@property (nonatomic ,retain) UILabel *txtLabel;
+@property (nonatomic,retain) UIImageView *PicImg;
 @property (nonatomic,retain) UIImageView *whiteImg;
+
+
 
 @end
 @implementation CustomTableViewCell
@@ -24,15 +29,14 @@
 }
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.contentView.backgroundColor = kClolor(213,213 , 213, .3);
-
+        
         _whiteImg = [[UIImageView alloc]init];
         _whiteImg.image = [UIImage imageNamed:@"holderImge"];
-        [self.contentView addSubview:self.whiteImg];
+        [self.contentView addSubview:_whiteImg];
         [_whiteImg release];
 
         _txtLabel = [[UILabel alloc]init];
-        _txtLabel.text = @"安康和卡号的加大了激烈的就安静了捡垃圾A记录婕拉安多拉卡卡卡卡阿卡卡啦啦啦卡卡卡卡";
+
         _txtLabel.textAlignment = NSTextAlignmentLeft;
         _txtLabel.font =  k_boldFont(15);
         _txtLabel.numberOfLines = 0 ;
@@ -41,13 +45,20 @@
         
         _PicImg = [[UIImageView alloc]init];
         _PicImg.backgroundColor = [UIColor redColor];
-        _PicImg.image = [UIImage imageNamed:@"bar.jpg"];
         [_whiteImg addSubview:_PicImg];
         [_PicImg release];
         
         
     }
     return self;
+}
+-(void)setModel:(BaseModel *)model{
+    if (_model != model) {
+        [_model release];
+        _model = [model retain];
+    }
+    _txtLabel.text = model.title;
+    [_PicImg sd_setImageWithURL:[NSURL URLWithString:model.images]];
 }
 
 -(void)layoutSubviews{

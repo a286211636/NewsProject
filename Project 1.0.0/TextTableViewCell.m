@@ -22,8 +22,6 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        self.contentView.backgroundColor = kClolor(213,213,213,0.3);
-;
         _whiteImg = [[UIImageView alloc]init];
         _whiteImg.image = [UIImage imageNamed:@"holderImge"];
         [self.contentView addSubview:_whiteImg];
@@ -51,17 +49,18 @@
     
     _txtLabel.frame = CGRectMake(10, 0, k_frameWidth/3*2, k_frameHeight - 20);
     
-}
-
-- (void)setModel:(DetailCellModel *)model{
-    if (_model != model) {
-        [_model release];
-        _model = [model retain];
-        
-        _txtLabel.text = model.title; 
     }
-    
+
+
+
+- (void)awakeFromNib {
+    // Initialization code
 }
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
 
 @end

@@ -10,6 +10,4 @@
 
 @interface NextViewController : UIViewController
 
-@property (nonatomic, retain) NSString *urlStr;
-
 @end

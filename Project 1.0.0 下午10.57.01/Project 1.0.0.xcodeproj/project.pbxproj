@@ -45,7 +45,6 @@
 		C2D20EAE1B57944000FD353A /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D20E6F1B57944000FD353A /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C2D20EAF1B57944000FD353A /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D20E711B57944000FD353A /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C2D20EB41B57A44600FD353A /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D20EB31B57A44600FD353A /* Networking.m */; };
-		C2D20EB71B57A9FC00FD353A /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D20EB61B57A9FC00FD353A /* ImageTableViewCell.m */; };
 		C2D4E8351B53BDAC00C9F288 /* holderImge.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D4E8341B53BDAC00C9F288 /* holderImge.png */; };
 /* End PBXBuildFile section */
 
@@ -130,8 +129,6 @@
 		C2D20E711B57944000FD353A /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		C2D20EB21B57A44600FD353A /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Networking.h; path = ../Controller/Networking.h; sourceTree = "<group>"; };
 		C2D20EB31B57A44600FD353A /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Networking.m; path = ../Controller/Networking.m; sourceTree = "<group>"; };
-		C2D20EB51B57A9FC00FD353A /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
-		C2D20EB61B57A9FC00FD353A /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		C2D4E8341B53BDAC00C9F288 /* holderImge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holderImge.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,8 +265,6 @@
 			children = (
 				C2CCB4BB1B4648DB009EFF88 /* CustomTableViewCell.h */,
 				C2CCB4BC1B4648DB009EFF88 /* CustomTableViewCell.m */,
-				C2D20EB51B57A9FC00FD353A /* ImageTableViewCell.h */,
-				C2D20EB61B57A9FC00FD353A /* ImageTableViewCell.m */,
 				C27B715C1B5633AF0089545B /* TextTableViewCell.h */,
 				C27B715D1B5633AF0089545B /* TextTableViewCell.m */,
 			);
@@ -447,7 +442,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D20EA61B57944000FD353A /* SDWebImageDownloaderOperation.m in Sources */,
-				C2D20EB71B57A9FC00FD353A /* ImageTableViewCell.m in Sources */,
 				C2D20EAC1B57944000FD353A /* UIImage+WebP.m in Sources */,
 				C2D20EA81B57944000FD353A /* SDWebImagePrefetcher.m in Sources */,
 				C2D20EA21B57944000FD353A /* SDImageCache.m in Sources */,

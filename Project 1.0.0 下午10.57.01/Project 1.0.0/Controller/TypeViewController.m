@@ -11,9 +11,9 @@
 #import "PrefixHeader.pch"
 #import "DetailCellModel.h"
 #import "DetailModel.h"
-#import "ImageTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "Networking.h"
+#import "CustomTableViewCell.h"
 
 @interface NextViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,6 +28,7 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
     [_detailArray release];
     [_mutableArray release];
     [_tableView release];
@@ -61,7 +62,7 @@
         model.color = dic[@"color"];
         model.descriptio = dic[@"description"];
         [self.mutableArray addObject:model];
-      
+            [model release];
             
         for (NSDictionary *dictionary in dic[@"stories"]) {
             DetailCellModel *modelCell = [[DetailCellModel alloc]init];
@@ -71,6 +72,7 @@
             modelCell.title = dictionary[@"title"];
             modelCell.type = dictionary[@"type"];
             [self.detailArray addObject:modelCell];
+            [modelCell release];
         }
         [self.tableView reloadData];
     }];
@@ -102,7 +104,7 @@
 
     [imageView sd_setImageWithURL:[NSURL URLWithString:string]];
     self.tableView.tableHeaderView = imageView;
-
+    [imageView release];
     [self.tableView reloadData];
 }
 
